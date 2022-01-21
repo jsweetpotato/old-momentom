@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap');
+
+::selection{
+    background-color: unset;
+}
+
+
+
+body{
+    background-color: black;
+}
+
+body > * {
+    display: flex;
+    justify-content: center;
+    caret-color: white;
+}
+
+.jsClock > h1{
+    margin: 0 auto;
+    padding-top: 15%; 
+    padding-bottom:5%;
+    text-align: center;
+    font-family: Tahoma;
+    font-size: 7em;
+    font-weight: 200;
+    color: #fff;
+    text-shadow: rgba(120, 120, 120, 0.5) 0 0 10px;
+    animation: fadeIn .1s linear;
+}
+
+.jsForm > input{
+    all: unset;
+    margin-bottom: 3%;
+    padding: 10px 30px 10px 30px;
+    text-align: center;
+    font-size: 2em;
+    font-family:  Tahoma, 'Nanum Gothic', sans-serif;
+    font-weight: 500;
+    letter-spacing: -1px;
+    background-color: rgba(120, 120, 120, 0.5);
+    color: #fff;
+    border: solid 4px #fff;
+    animation: fadeIn .1s linear;
+}
+
+.jsForm > input::placeholder,.jsToDo > input::placeholder{
+    color: rgba(255, 255, 255, 0.5);
+    text-shadow: rgba(100, 100, 100, 0.5) 0 0 10px;
+    font-family:  Tahoma, 'Nanum Gothic', sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+}
+
+.jsGreet{
+    margin-top: -2%;
+    font-weight: 600;
+    font-size: 2.5em;
+    color: #fff;
+    text-shadow: rgba(100, 100, 100, 0.5) 0 0 10px;
+    animation: fadeIn .1s linear;
+}
+
+.jsToDo > input{
+    all: unset;
+    margin-bottom: 3%;
+    padding: 5px 10px 5px 10px;
+    text-align: center;
+    font-size: 1.5em;
+    font-family:  Tahoma, 'Nanum Gothic', sans-serif ;
+    font-weight: 300;
+    color: #fff;
+    border-bottom: solid 3px rgba(255, 255, 255, 0);
+    animation: fadeIn .1s linear;
+    transition: border-bottom 0.3s ease-in-out;
+}
+
+.jsToDo > input:hover{
+    border-bottom: solid 3px #fff;
+
+}
+.form, .greetings{
+    display: none;
+}
+
+.showing{
+    display: flex;
+}
+
+.jsToDoList{
+    padding: 0;
+    display: block;
+    text-align: center;
+    justify-content: center;
+}
+
+.jsToDoList > li{
+    padding: 10px;
+    display: block;
+    color: white;
+    fill: rgba(120, 120, 120, 0.5);
+}
+
+.jsToDoList > li > span{
+    white-space: pre-wrap;
+    font-size: 1.5em;
+    font-family: Tahoma,'Nanum Gothic', sans-serif;
+}
+
+
+.jsToDoList > li > button{
+    all: unset;
+    padding-left: 5px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.jsToDoList > li > button:hover{
+    color: lawngreen;
+}
+
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+    } to{
+        opacity: 1;
+    }
+}
+
+.bgImage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: fadeIn .5s linear;
+}
+
+.jsWeather{
+    top: 55px;
+    right: 30px;
+    position: absolute;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 500;
+    font-family: Tahoma;
+    text-shadow: rgba(120, 120, 120, 0.5) 0 0 10px;
+    z-index: 1;
+}
+
+.jsPlace{
+    top: 30px;
+    right: 30px;
+    position: absolute;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 500;
+    font-family: Tahoma;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-shadow: rgba(100, 100, 100, 0.5) 0 0 10px;
+    z-index: 1;
+}
